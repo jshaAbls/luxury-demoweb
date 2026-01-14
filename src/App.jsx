@@ -10,6 +10,8 @@ import { SiGodaddy } from "react-icons/si";
 
 import { useEffect } from 'react';
 
+import { useState } from 'react';
+
 
 
 
@@ -62,9 +64,22 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
 
+const [modal, setModal] = useState(true);
+
+const toggleModal = () =>{
+  setModal(!modal)
+}
   
   return (
     <>
+        <div className='containerModal'>
+            <div className="modal">
+                <button onClick={() => close()}><span>close</span></button>
+                <h2>Hello Modale</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque accusantium modi optio magni, aperiam veniam harum laborum ab quisquam, repudiandae temporibus ex officia, ipsam distinctio libero quod incidunt sequi. Perferendis ab tenetur qui aliquam non? Possimus quibusdam at qui vero, deserunt voluptatem, cupiditate sit dignissimos, delectus quasi laudantium corrupti explicabo.</p>
+            </div> 
+        </div>
+     
       <header>
         <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/blob-6c0c2e0.png/:/rs=w:536,h:167,cg:true,m/cr=w:536,h:167/qt=q:95" alt="" />
       </header>
