@@ -1,3 +1,13 @@
+# Good Day!
+
+## My name is Joshua Abalos. 
+
+A fresh computer engineering graduate from De La Salle University of Dasmarinas in the Philippines. I would first like to thank you for accepting my application and allowing me to proceed to the web building assignment. I have built this with referencing the demo website that you have sent. And have put my own modifications. I am still currently expanding my skills on web development. 
+
+I would like to thank you again for accepting my application. I aim to expand my knowledge more as I join your company.
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

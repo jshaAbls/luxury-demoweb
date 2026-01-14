@@ -69,16 +69,44 @@ const [modal, setModal] = useState(true);
 const toggleModal = () =>{
   setModal(!modal)
 }
+
+useEffect(() => {
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
+  return () => document.body.classList.remove("active-modal");
+}, [modal]);
+
   
   return (
+    
     <>
-        <div className='containerModal'>
-            <div className="modal">
-                <button onClick={() => close()}><span>close</span></button>
-                <h2>Hello Modale</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque accusantium modi optio magni, aperiam veniam harum laborum ab quisquam, repudiandae temporibus ex officia, ipsam distinctio libero quod incidunt sequi. Perferendis ab tenetur qui aliquam non? Possimus quibusdam at qui vero, deserunt voluptatem, cupiditate sit dignissimos, delectus quasi laudantium corrupti explicabo.</p>
-            </div> 
-        </div>
+    {modal && (
+  <div className="modal">
+    <div className="overlay" onClick={toggleModal}></div>
+
+    <div className="modal-content">
+      <button className="close-modal" onClick={toggleModal}>Close</button>
+
+      <h2>Good day!</h2>
+      <p>
+My name is Joshua Abalos. A fresh computer engineering graduate from De La Salle University of Dasmarinas in the Philippines. I would first like to thank you for accepting my application and allowing me to proceed to the web building assignment. I have built this with referencing the demo website that you have sent. And have put my own modifications. I am still currently expanding my skills on web development. 
+
+I would like to thank you again for accepting my application. I aim to expand my knowledge more as I join your company.
+      </p>
+
+      <button className="primary-btn" onClick={toggleModal}>
+        Enter Site
+      </button>
+    </div>
+  </div>
+)}
+
+
+
      
       <header>
         <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/blob-6c0c2e0.png/:/rs=w:536,h:167,cg:true,m/cr=w:536,h:167/qt=q:95" alt="" />
@@ -361,6 +389,14 @@ const toggleModal = () =>{
         </div>
       </div>
       </footer>
+
+      <button
+  className="floating-modal-btn"
+  onClick={() => setModal(true)}
+  aria-label="Open welcome modal">
+      👋!
+      </button>
+
     </>
   )
 }
