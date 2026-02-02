@@ -7,7 +7,7 @@ A fresh computer engineering graduate from De La Salle University of Dasmarinas 
 I would like to thank you again for accepting my application. I aim to expand my knowledge more as I join your company.
 
 # Access the Website Here
-(https:///jshaAbls.github.io/luxury-demoweb)
+link: https:///jshaAbls.github.io/luxury-demoweb
 
 
 
