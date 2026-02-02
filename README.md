@@ -1,3 +1,6 @@
+# Notice
+This is a Demo website from the company that I applied for. 
+
 # Good Day!
 
 ## My name is Joshua Abalos. 
